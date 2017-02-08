@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta content="text/html; charset=utf-8">
+<title>五子棋游戏</title>
+<link href="css/index.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<div class="user">
+		<h3>你的英雄</h3>
+		<img id="userImg" class="userImg" alt="x" src="imgs/unlogin.png">
+		<div id="userName">未设置</div>
+		<a id="a">
+			<button id="login" type="button" onclick="login();">登录</button>
+		</a>
+	</div>
+	<div class="set">
+		<h2>设置用户名:</h2>
+		<input id="inName" type="text"/>
+		<input type="button" value="校验" 
+			onclick="checkName();">
+		<span id="checkResult"></span>
+		<h2>选择喜欢的英雄:</h2>
+		<div class="hero">
+			<img alt="x" src="imgs/look0.jpg" onclick="changeImg(0);">
+			<img alt="x" src="imgs/look1.jpg" onclick="changeImg(1);">
+			<img alt="x" src="imgs/look2.jpg" onclick="changeImg(2);">
+			<img alt="x" src="imgs/look3.jpg" onclick="changeImg(3);">
+			<img alt="x" src="imgs/look4.jpg" onclick="changeImg(4);">
+			<img alt="x" src="imgs/look5.jpg" onclick="changeImg(5);">
+			<img alt="x" src="imgs/look6.jpg" onclick="changeImg(6);">
+		</div>
+		<h2 id="heroName">亚索</h2>
+	</div>
+	<script type="text/javascript">
+	var imgIndex=-1;
+	var isCheckSuc=false;
+	var intext=document.getElementById("inName");
+	var userName=document.getElementById("userName");
+	var heroName=document.getElementById("heroName");
+	var userImg=document.getElementById("userImg");
+	//校验用户名输入
+	var checkName=function(){
+		var result=document.getElementById("checkResult");
+		if(intext.value!=""){
+			userName.innerHTML = intext.value;
+			result.innerHTML ="成功!";
+			isCheckSuc=true;
+		}else{
+			result.innerHTML ="失败!";
+			isCheckSuc=false;
+		}
+	}
+	//点击登录
+	var login=function(){
+		if(!isCheckSuc){
+			alert("用户名校验失败");
+			return;
+		}
+		if(imgIndex < 0){
+			alert("未选择英雄");
+			return;
+		}
+		document.getElementById("a").href=
+			"game.html?name="+userName.innerHTML+"&img="+imgIndex;
+	}
+	//改变选择的英雄
+	var changeImg=function(index){
+		switch(index){
+		case 0:
+			heroName.innerHTML="青铜提莫";
+			userImg.src = "imgs/look0.jpg";
+			break;
+		case 1:
+			heroName.innerHTML="白银机器人";
+			userImg.src = "imgs/look1.jpg";
+			break;
+		case 2:
+			heroName.innerHTML="黄金锐雯";
+			userImg.src = "imgs/look2.jpg";
+			break;
+		case 3:
+			heroName.innerHTML="铂金亚索";
+			userImg.src = "imgs/look3.jpg";
+			break;
+		case 4:
+			heroName.innerHTML="钻石EZ";
+			userImg.src = "imgs/look4.jpg";
+			break;
+		case 5:
+			heroName.innerHTML="大师锤石";
+			userImg.src = "imgs/look5.jpg";
+			break;
+		case 6:
+			heroName.innerHTML="王者卡特";
+			userImg.src = "imgs/look6.jpg";
+			break;
+		}
+		imgIndex=index;
+	}
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<link href="css/main.css" rel="stylesheet" type="text/css">
+	<link href="css/player.css" rel="stylesheet" type="text/css">
+	<link href="css/game.css" rel="stylesheet" type="text/css">
+	<link href="css/chat.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="game.js" charset="UTF-8"></script>
+	<title>五子棋游戏</title>
+</head>
+<body>
+	<div class="container">
+		<div class="player">
+			<img id="nomeImg" alt="对手" src="imgs/unlogin.png" 
+				width="140px" height="280px">
+			<div>
+				<span>用户名:</span><span id="user2">未登录</span><br>
+				<span>等级:</span><span id="rank2">--</span><br>
+				<span>局数:</span><span id="gnum2">0</span><br>
+				<span>胜局:</span><span id="win2">0</span><br>
+				<span>倒计时:</span><span id="timeout2">--</span><br>
+				<img id="turnImg2" src="imgs/player_black.png" 
+					width=50px height=50px 
+					style="margin-left:20px;margin-top:20px;visibility:hidden;">
+			</div>
+			<p style="text-align:center"><b>VS</b></p>
+			<img id="meImg" alt="我" src="imgs/unlogin.png" 
+				width="140px" height="280px">
+			<div>
+				<span>用户名:</span><span id="user1">未登录</span><br>
+				<span>等级:</span><span id="rank1">--</span><br>
+				<span>局数:</span><span id="gnum1">0</span><br>
+				<span>胜局:</span><span id="win1">0</span><br>
+				<span>倒计时:</span><span id="timeout1">--</span><br>
+				<img id="turnImg1" src="imgs/player_white.png" 
+					width=50px height=50px 
+					style="margin-left:20px;margin-top:20px;visibility:hidden;">
+			</div>
+		</div>
+		<div class="game">
+			<h1>五子棋</h1>
+			<div class="centermain">
+			<canvas id="backCanvas" width="550" height="550"></canvas>
+			<canvas id="gameCanvas" width="550" height="550"></canvas>
+			<canvas id="tipCanvas" width="550" height="550"></canvas>
+			</div>
+			<div class="btnDiv">
+				<button id="readyBtn" type="button">准备</button>
+				<button id="sumBtn" type="button">求和</button>
+				<button id="undoBtn" type="button">悔棋</button>
+				<button id="giveupBtn" type="button">认输</button>
+			</div>
+		</div>
+		<div class="chat">
+			<h3>聊天窗</h3>
+			<textarea id="receive"></textarea>
+			<textarea id="send"></textarea>
+			<input id="sendBtn" type="button" value="发送" style="margin-top:10px">
+		</div>
+	</div>
+	<script type="text/javascript">
+		gobang.waitGame();
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+

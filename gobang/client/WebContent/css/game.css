@@ -1,0 +1,43 @@
+@CHARSET "UTF-8";
+/*游戏的canvas*/
+.centermain{
+	width:550px;
+	height:550px;
+	position:relative;
+	left:50px;
+}
+.btnDiv{
+	margin-top:10px;
+}
+.btnDiv > button{
+	margin:20px;
+}
+#backCanvas,#gameCanvas,#tipCanvas{
+	position:absolute;
+	left:0;
+	top:0;
+}
+
+#backCanvas{
+	z-index:0;
+}
+
+#gameCanvas{
+	z-index:1;
+}
+
+#tipCanvas{
+	z-index:2;
+}
+
+
+
+
+
+
+
+
+
+
+
+

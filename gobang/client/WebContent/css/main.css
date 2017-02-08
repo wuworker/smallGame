@@ -1,0 +1,46 @@
+@CHARSET "UTF-8";
+/*游戏主界面*/
+body{
+	padding-left:30px;
+}
+div.container{
+	display: box;
+	display: -webkit-box;
+	display: -moz-box;
+    display: -ms-flexbox;
+    display: -o-box;
+	width:1300px;
+}
+
+div.container > div{
+	
+	height:700px;
+}
+
+div.player{
+	width:300px;
+	text-align:left;
+}
+
+div.game{
+	width:650px;
+	text-align:center;
+
+}
+
+div.chat{
+	width:300px;
+	text-align:center;
+	padding-left:10px;
+	padding-right:10px;
+}
+
+
+
+
+
+
+
+
+
+

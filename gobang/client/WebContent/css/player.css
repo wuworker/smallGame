@@ -1,0 +1,24 @@
+@CHARSET "UTF-8";
+
+
+/*玩家信息div*/
+div.player > div{
+	display:inline-block;
+	position:relative;
+}
+/*玩家信息span*/
+div.player span{
+	margin:10px;
+	display:inline-block;
+}
+
+
+
+
+
+
+
+
+
+
+
